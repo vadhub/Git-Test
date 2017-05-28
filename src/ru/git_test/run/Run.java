@@ -18,6 +18,7 @@ public class Run {
 		JButton commit = new JButton("Commit");
 		JButton push = new JButton("Push");
 		
+		
 		btn_panel.setLayout(new FlowLayout());
 		btn_panel.add(init);
 		btn_panel.add(add);

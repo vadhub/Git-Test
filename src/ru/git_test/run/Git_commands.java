@@ -2,6 +2,8 @@ package ru.git_test.run;
 
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 public class Git_commands {
 
 	// methods with git commands
@@ -15,8 +17,9 @@ public class Git_commands {
 	}
 
 	public void gitCommit() throws IOException {
-		runCommand("git commit -m");
-		System.out.println("complete 'git commit -m'");
+		String massege = JOptionPane.showInputDialog(null, "massege");		
+		runCommand("git commit -m'"+massege+"'");
+		System.out.println("complete 'git commit -m"+massege+"'");
 	}
 
 	public void gitPush() throws IOException {
