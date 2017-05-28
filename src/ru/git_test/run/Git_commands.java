@@ -19,7 +19,7 @@ public class Git_commands {
 	public void gitCommit() throws IOException {
 		String massege = JOptionPane.showInputDialog(null, "massege");		
 		runCommand("git commit -m'"+massege+"'");
-		System.out.println("complete 'git commit -m"+massege+"'");
+		System.out.println("git commit -m'"+massege+"'");
 	}
 
 	public void gitPush() throws IOException {
