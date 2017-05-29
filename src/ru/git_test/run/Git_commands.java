@@ -21,7 +21,7 @@ public class Git_commands {
 	}
 
 	public Object gitPush() throws IOException {
-		return runCommand("git push");
+		return runCommand("git remote add origin https://github.com/vadhub/Git-Test");
 	}
 
 	// run command git
