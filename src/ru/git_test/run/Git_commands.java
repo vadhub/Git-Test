@@ -21,7 +21,7 @@ public class Git_commands {
 	}
 
 	public Object gitPush() throws IOException {
-		return runCommand("git push");
+		return runCommand("git push -u origin master");
 	}
 
 	// run command git
