@@ -7,27 +7,25 @@ import javax.swing.JOptionPane;
 public class Git_commands {
 
 	// methods with git commands
-	public void gitInit() throws IOException {
-		runCommand("git init");
+	public Object gitInit() throws IOException {
+		return runCommand("git init");
 	}
 
-	public void gitAdd() throws IOException {
-		runCommand("git add .");
-		System.out.println("complete 'git add .'");
+	public Object gitAdd() throws IOException {			
+		return runCommand("git add .");
+	}
+	public Object gitCommit() throws IOException {
+		String massege = JOptionPane.showInputDialog(null, "massege");	
+		System.out.println("git commit -m"+massege+"");
+		return runCommand("git commit -m"+massege+"");
 	}
 
-	public void gitCommit() throws IOException {
-		String massege = JOptionPane.showInputDialog(null, "massege");		
-		runCommand("git commit -m'"+massege+"'");
-		System.out.println("git commit -m'"+massege+"'");
-	}
-
-	public void gitPush() throws IOException {
-		runCommand("git push");
+	public Object gitPush() throws IOException {
+		return runCommand("git push");
 	}
 
 	// run command git
-	public void runCommand(String commands) {
+	public Object runCommand(String commands) {
 		try {
 			Process p = Runtime.getRuntime().exec(commands);
 			// wait for process complete
@@ -35,6 +33,7 @@ public class Git_commands {
 		} catch (InterruptedException | IOException e) {
 			e.printStackTrace();
 		}
+		return commands;
 	}
 
 }

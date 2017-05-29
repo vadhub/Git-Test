@@ -28,6 +28,7 @@ public class Run {
 		frame.add(btn_panel);	
 		frame.pack();
 		frame.setVisible(true);
+		frame.setLocation(455, 455);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//run command
