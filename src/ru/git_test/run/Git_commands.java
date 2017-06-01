@@ -5,7 +5,11 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 public class Git_commands {
-
+	
+	//calling window git in program 
+	public Object gitCall(){
+		return runCommand("C:\\Program Files\\Git\\git-bash.exe");	
+	}
 	// methods with git commands
 	public Object gitInit() throws IOException {
 		return runCommand("git init");
@@ -21,9 +25,8 @@ public class Git_commands {
 	}
 
 	public Object gitPush() throws IOException {
-		return runCommand("git remote add origin https://github.com/vadhub/Git-Test.git");
+		return runCommand("git push");
 	}
-
 	// run command git
 	public Object runCommand(String commands) {
 		try {
@@ -31,6 +34,7 @@ public class Git_commands {
 			// wait for process complete
 			p.waitFor();
 		} catch (InterruptedException | IOException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage());
 			e.printStackTrace();
 		}
 		return commands;

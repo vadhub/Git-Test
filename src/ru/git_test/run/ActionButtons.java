@@ -1,6 +1,7 @@
 package ru.git_test.run;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 
 public class ActionButtons {
@@ -12,6 +13,7 @@ public class ActionButtons {
 				gc.gitInit();
 			} catch (Exception e1) {
 				e1.printStackTrace();
+				JOptionPane.showMessageDialog(null, e1.getMessage());
 			}
 		});
 	}
@@ -22,6 +24,7 @@ public class ActionButtons {
 				gc.gitAdd();
 			} catch (Exception e1) {
 				e1.printStackTrace();
+				JOptionPane.showMessageDialog(null, e1.getMessage());
 			}
 		});
 	}
@@ -32,6 +35,7 @@ public class ActionButtons {
 				gc.gitCommit();
 			} catch (Exception e1) {
 				e1.printStackTrace();
+				JOptionPane.showMessageDialog(null, e1.getMessage());
 			}
 		});
 	}
@@ -42,6 +46,17 @@ public class ActionButtons {
 				gc.gitPush();
 			} catch (Exception e1) {
 				e1.printStackTrace();
+				JOptionPane.showMessageDialog(null, e1.getMessage());
+			}
+		});
+	}
+	public void actionButtonGitCall(JButton btn) {
+		btn.addActionListener((e) -> {
+			try {
+				gc.gitCall();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+				JOptionPane.showMessageDialog(null, e1.getMessage());
 			}
 		});
 	}

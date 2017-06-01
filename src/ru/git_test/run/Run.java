@@ -13,6 +13,7 @@ public class Run {
 		
 		JFrame frame = new JFrame("Git-test");
 		JPanel btn_panel = new JPanel();
+		JButton git = new JButton("git"); 
 		JButton init = new JButton("Init local repo");
 		JButton add = new JButton("Add code");
 		JButton commit = new JButton("Commit");
@@ -20,6 +21,7 @@ public class Run {
 		
 		
 		btn_panel.setLayout(new FlowLayout());
+		btn_panel.add(git);
 		btn_panel.add(init);
 		btn_panel.add(add);
 		btn_panel.add(commit);
@@ -32,6 +34,7 @@ public class Run {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//run command
+		abs.actionButtonGitCall(git);
 		abs.actionButtonInit(init);
 		abs.actionButtonAdd(add);
 		abs.actionButtonCommit(commit);
