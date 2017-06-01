@@ -1,6 +1,7 @@
 package ru.git_test.run;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.io.IOException;
 
 import javax.swing.JButton;
