@@ -1,7 +1,7 @@
 package ru.git_test.run;
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.io.IOException;
 
 import javax.swing.JButton;
@@ -17,7 +17,7 @@ public class Run {
 		JFrame frame = new JFrame("Git-test");
 		
 		JPanel btn_panel = new JPanel();
-		JPanel txt_panel = new JPanel();
+		JPanel path_panel = new JPanel();
 		
 		JButton git = new JButton("git"); 
 		JButton init = new JButton("Init local repo");
@@ -34,15 +34,15 @@ public class Run {
 		btn_panel.add(add);
 		btn_panel.add(commit);
 		btn_panel.add(push);
-		btn_panel.add(goto_path);
 		
-		txt_panel.setLayout(new FlowLayout());
-		txt_panel.add(path);
+		path_panel.add(goto_path);		
+		path_panel.setLayout(new FlowLayout());
+		path_panel.add(path);
 		
 		frame.setLayout(new BorderLayout());
 		
 		frame.add(btn_panel, "North");
-		frame.add(txt_panel, "South");
+		frame.add(path_panel, "South");
 		frame.pack();
 		frame.setVisible(true);
 		frame.setLocation(455, 455);
