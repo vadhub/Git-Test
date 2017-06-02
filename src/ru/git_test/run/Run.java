@@ -22,8 +22,7 @@ public class Run {
 		JButton git = new JButton("git"); 
 		JButton init = new JButton("Init local repo");
 		JButton add = new JButton("Add code");
-		JButton commit = new JButton("Commit");
-		JButton push = new JButton("Push");
+		JButton commit = new JButton("Commit");	
 		JButton goto_path = new JButton("goto path");
 		
 		JTextField path = new JTextField(10);
@@ -32,8 +31,7 @@ public class Run {
 		btn_panel.add(git);
 		btn_panel.add(init);
 		btn_panel.add(add);
-		btn_panel.add(commit);
-		btn_panel.add(push);
+		btn_panel.add(commit);	
 		
 		path_panel.add(goto_path);		
 		path_panel.setLayout(new FlowLayout());
@@ -52,10 +50,7 @@ public class Run {
 		abs.actionButtonGitCall(git);
 		abs.actionButtonInit(init);
 		abs.actionButtonAdd(add);
-		abs.actionButtonCommit(commit);
-		abs.actionButtonPush(push);
-		
-		
+		abs.actionButtonCommit(commit);		
 		
 	}	
 

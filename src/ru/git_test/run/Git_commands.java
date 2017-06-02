@@ -1,11 +1,13 @@
 package ru.git_test.run;
 
 import java.io.IOException;
+import java.nio.file.Path;
 
 import javax.swing.JOptionPane;
 
 public class Git_commands {
 	
+	Path path;	
 	//calling window git in program 
 	public Object gitCall(){
 		return runCommand("C:\\Program Files\\Git\\git-bash.exe");	
@@ -22,18 +24,14 @@ public class Git_commands {
 		String massege = JOptionPane.showInputDialog(null, "massege");	
 		System.out.println("git commit -m"+massege+"");
 		return runCommand("git commit -m"+massege+"");
-	}
-
-	public Object gitPush() throws IOException {
-		return runCommand("git push");
-	}
+	}	
 	// run command git
 	public Object runCommand(String commands) {
 		try {
-			Process p = Runtime.getRuntime().exec(commands);
-			// wait for process complete
-			p.waitFor();
-		} catch (InterruptedException | IOException e) {
+			
+			Runtime.getRuntime().exec(commands);
+						
+		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 			e.printStackTrace();
 		}

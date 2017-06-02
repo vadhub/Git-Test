@@ -39,17 +39,7 @@ public class ActionButtons {
 			}
 		});
 	}
-
-	public void actionButtonPush(JButton btn) {
-		btn.addActionListener((e) -> {
-			try {
-				gc.gitPush();
-			} catch (Exception e1) {
-				e1.printStackTrace();
-				JOptionPane.showMessageDialog(null, e1.getMessage());
-			}
-		});
-	}
+	
 	public void actionButtonGitCall(JButton btn) {
 		btn.addActionListener((e) -> {
 			try {
