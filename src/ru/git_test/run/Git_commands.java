@@ -1,13 +1,12 @@
 package ru.git_test.run;
 
 import java.io.IOException;
-import java.nio.file.Path;
-
 import javax.swing.JOptionPane;
 
-public class Git_commands {
-	
-	Path path;	
+public class Git_commands {	
+	public Object gitCd(String path){
+		return runCommand("cd /c"+path);				
+	}
 	//calling window git in program 
 	public Object gitCall(){
 		return runCommand("C:\\Program Files\\Git\\git-bash.exe");	
@@ -16,7 +15,7 @@ public class Git_commands {
 	public Object gitInit() throws IOException {
 		return runCommand("git init");
 	}
-
+	
 	public Object gitAdd() throws IOException {			
 		return runCommand("git add .");
 	}
@@ -27,10 +26,8 @@ public class Git_commands {
 	}	
 	// run command git
 	public Object runCommand(String commands) {
-		try {
-			
-			Runtime.getRuntime().exec(commands);
-						
+		try {			
+			Runtime.getRuntime().exec(commands);						
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 			e.printStackTrace();

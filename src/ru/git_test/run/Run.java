@@ -51,6 +51,7 @@ public class Run {
 		abs.actionButtonInit(init);
 		abs.actionButtonAdd(add);
 		abs.actionButtonCommit(commit);		
+		abs.actionButtonGitCd(goto_path, path);
 		
 	}	
 

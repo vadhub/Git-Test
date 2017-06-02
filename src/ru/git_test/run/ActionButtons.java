@@ -2,6 +2,7 @@ package ru.git_test.run;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 public class ActionButtons {
@@ -44,6 +45,16 @@ public class ActionButtons {
 		btn.addActionListener((e) -> {
 			try {
 				gc.gitCall();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+				JOptionPane.showMessageDialog(null, e1.getMessage());
+			}
+		});
+	}
+	public void actionButtonGitCd(JButton btn, JTextField txt) {
+		btn.addActionListener((e) -> {
+			try {
+				gc.gitCd(txt.getText());
 			} catch (Exception e1) {
 				e1.printStackTrace();
 				JOptionPane.showMessageDialog(null, e1.getMessage());
