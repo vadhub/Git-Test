@@ -1,11 +1,22 @@
 package ru.git_test.run;
 
 import java.io.IOException;
+import java.nio.file.Path;
+
 import javax.swing.JOptionPane;
 
 public class Git_commands {	
-	public Object gitCd(String path){
-		return runCommand("cd /c"+path);				
+	
+	//class calling commands git in java program
+	
+	
+	public void gitCd(Path path){
+		ProcessBuilder p =new ProcessBuilder("git add .").directory(path.toFile());
+		try {
+			p.start();
+		} catch (IOException e) {			
+			e.printStackTrace();
+		}				
 	}
 	//calling window git in program 
 	public Object gitCall(){
@@ -33,6 +44,6 @@ public class Git_commands {
 			e.printStackTrace();
 		}
 		return commands;
-	}
+	}	
 
 }

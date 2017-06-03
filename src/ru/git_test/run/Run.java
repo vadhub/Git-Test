@@ -10,6 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Run {
+	
+	//Class is responsible for the appearance of the program
 
 	public static void main(String[] args) throws IOException {
 		ActionButtons abs = new ActionButtons();	
@@ -25,7 +27,7 @@ public class Run {
 		JButton commit = new JButton("Commit");	
 		JButton goto_path = new JButton("goto path");
 		
-		JTextField path = new JTextField(10);
+		JTextField path = new JTextField(22);
 		
 		btn_panel.setLayout(new FlowLayout());
 		btn_panel.add(git);
@@ -37,8 +39,7 @@ public class Run {
 		path_panel.setLayout(new FlowLayout());
 		path_panel.add(path);
 		
-		frame.setLayout(new BorderLayout());
-		
+		frame.setLayout(new BorderLayout());		
 		frame.add(btn_panel, "North");
 		frame.add(path_panel, "South");
 		frame.pack();
